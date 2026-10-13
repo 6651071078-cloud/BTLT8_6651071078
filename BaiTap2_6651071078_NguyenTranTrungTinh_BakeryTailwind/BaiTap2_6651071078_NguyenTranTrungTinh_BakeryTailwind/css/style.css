@@ -1,0 +1,38 @@
+/* CSS bổ sung cho phần Tailwind chưa hỗ trợ sẵn */
+
+/* Font chữ logo kiểu viết tay (Tailwind không có sẵn font này) */
+.logo-script {
+  font-family: 'Pacifico', cursive;
+}
+
+/* Font tiêu đề serif dùng chung (fallback nếu Tailwind config chưa nạp kịp) */
+.font-display {
+  font-family: 'Playfair Display', Georgia, serif;
+}
+
+/* Animation tuỳ biến: menu di động trượt xuống khi mở */
+@keyframes slideDown {
+  from { opacity: 0; transform: translateY(-8px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+#mobile-menu.flex {
+  animation: slideDown 0.25s ease-out;
+}
+
+/* Animation tuỳ biến: các thẻ bánh hiện dần khi tải trang */
+@keyframes fadeUp {
+  from { opacity: 0; transform: translateY(16px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+#menu-banh article {
+  animation: fadeUp 0.6s ease both;
+}
+#menu-banh article:nth-child(2) { animation-delay: 0.08s; }
+#menu-banh article:nth-child(3) { animation-delay: 0.16s; }
+#menu-banh article:nth-child(4) { animation-delay: 0.24s; }
+#menu-banh article:nth-child(5) { animation-delay: 0.32s; }
+#menu-banh article:nth-child(6) { animation-delay: 0.40s; }
+
+/* Cuộn mượt khi bấm link neo; chừa chỗ cho header dính phía trên */
+html { scroll-behavior: smooth; }
+section[id], aside[id], footer[id] { scroll-margin-top: 80px; }

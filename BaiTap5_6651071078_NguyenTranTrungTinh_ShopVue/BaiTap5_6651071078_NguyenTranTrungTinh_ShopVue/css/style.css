@@ -1,0 +1,63 @@
+/* CSS tuỳ biến cho Shop Vue (nạp sau Bootstrap để override) */
+
+:root {
+  --tg-blue: #1d5fd8;
+  --tg-blue-dark: #1548a8;
+}
+
+body { background: #f8f9fb; }
+
+/* Header */
+.site-header { box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06); }
+.brand { font-weight: 800; color: var(--tg-blue) !important; letter-spacing: 1px; }
+
+/* Override màu btn-primary của Bootstrap */
+.btn-primary {
+  --bs-btn-bg: var(--tg-blue);
+  --bs-btn-border-color: var(--tg-blue);
+  --bs-btn-hover-bg: var(--tg-blue-dark);
+  --bs-btn-hover-border-color: var(--tg-blue-dark);
+  --bs-btn-active-bg: var(--tg-blue-dark);
+  --bs-btn-active-border-color: var(--tg-blue-dark);
+  --bs-btn-disabled-bg: #8fb0ee;
+  --bs-btn-disabled-border-color: #8fb0ee;
+}
+
+/* Override nav-link của Bootstrap */
+.nav-link { font-weight: 600; font-size: 0.85rem; text-transform: uppercase; }
+.nav-link.active { color: var(--tg-blue) !important; }
+
+/* Card sản phẩm */
+.product-card {
+  border-radius: 14px;
+  border: 1px solid #e3e7ef;
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+.product-card:hover { transform: translateY(-3px); box-shadow: 0 8px 20px rgba(29, 95, 216, 0.15); }
+.product-card .card-img-top { background: #eef2f8; border-radius: 12px; aspect-ratio: 1 / 1; object-fit: contain; }
+.product-name { font-size: 0.75rem; font-weight: 700; text-transform: uppercase; margin: 6px 0 2px; }
+.product-desc { font-size: 0.7rem; margin-bottom: 8px; }
+.price { color: var(--tg-blue); font-size: 0.85rem; }
+
+/* Giỏ hàng */
+.cart-panel {
+  background: #eef2f8;
+  border-radius: 16px;
+  border: 1px solid #dce3f0;
+  top: 80px;
+}
+.cart-item { background: #fff; border-radius: 10px; padding: 8px; margin-bottom: 8px; }
+.cart-thumb { width: 44px; height: 44px; object-fit: contain; background: #eef2f8; border-radius: 8px; }
+.cart-name { font-size: 0.75rem; font-weight: 700; text-transform: uppercase; }
+.cart-price { font-size: 0.75rem; color: #555; }
+.btn-remove {
+  width: 24px; height: 24px; border: 0; border-radius: 50%;
+  background: #e5484d; color: #fff; line-height: 1; font-size: 1rem; cursor: pointer;
+}
+.btn-remove:hover { background: #c7343a; }
+
+/* Banner khuyến mãi */
+.promo { background: linear-gradient(90deg, #2f80ed, #7b4fd8); }
+
+/* Footer */
+.site-footer { background: #222; }
